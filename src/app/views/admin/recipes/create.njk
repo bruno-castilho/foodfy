@@ -11,3 +11,10 @@
     </form>
 
 {% endblock main %}
+
+{% block scripts %}
+    <script>
+        Utils.addInputOnClick(".add-ingredient", document.querySelector("#ingredients"), document.querySelectorAll(".ingredient"))
+        Utils.addInputOnClick(".add-preparation", document.querySelector("#preparation"), document.querySelectorAll(".preparation"))
+    </script>
+{% endblock %}

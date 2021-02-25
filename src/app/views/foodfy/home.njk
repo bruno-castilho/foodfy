@@ -27,4 +27,11 @@
                 </div>
             </div>
         </main>
-    {% endblock main %}
+{% endblock main %}
+
+{% block scripts %}
+    <script>
+        const cards = document.querySelectorAll('.card')
+        Utils.addLinksInCards(cards)
+    </script>
+{% endblock %}

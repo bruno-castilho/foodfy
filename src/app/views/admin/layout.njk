@@ -24,10 +24,13 @@
                 </section>
             </div>
         </header>
-        {% block main %}
-        {% endblock main %}
-        <script src="/scripts.js">
+        {% block main %}{% endblock main %}
+        <script src="/scripts.js"></script>
+        <script>
+            const linksFoodfy = document.querySelectorAll("header .links a")
+            Utils.activeLinks(linksFoodfy)
         </script>
+        {% block scripts %}{% endblock scripts %}
     </body>
     
 </html>

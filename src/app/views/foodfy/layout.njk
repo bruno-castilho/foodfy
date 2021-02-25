@@ -22,7 +22,13 @@
                 <h1>Todos direitos reservados, receitas Foodfy</h1>
             </div>
         </footer>
-        <script src="/scripts.js"></script>
+        <script src="/scripts.js">
+        </script>
+        <script>
+            const linksFoodfy = document.querySelectorAll("header .links a")
+            Utils.activeLinks(linksFoodfy)
+        </script>
+        {% block scripts %}{% endblock scripts %}
     </body>
 
 </html>

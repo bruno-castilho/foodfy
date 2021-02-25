@@ -59,3 +59,11 @@
 </div>
     </main>
 {% endblock main %}
+
+{% block scripts %}
+    <script>
+        const shows = document.querySelectorAll('.show')
+        Utils.createActionShow(shows)
+        PhotosGalery.Photos()
+    </script>
+{% endblock %}

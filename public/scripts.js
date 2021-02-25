@@ -334,24 +334,3 @@ const Validate = {
 
 
 }
-
-
-const linksFoodfy = document.querySelectorAll("header .links a")
-Utils.activeLinks(linksFoodfy)
-
-const linksAdmin = document.querySelectorAll("header #header-admin .countainer a")
-Utils.activeLinks(linksAdmin)
-
-
-const cards = document.querySelectorAll('.card')
-Utils.addLinksInCards(cards)
-
-const shows = document.querySelectorAll('.show')
-Utils.createActionShow(shows)
-
-
-//PhotosGalery.Photos()
-
-Utils.addInputOnClick(".add-ingredient", document.querySelector("#ingredients"), document.querySelectorAll(".ingredient"))
-
-Utils.addInputOnClick(".add-preparation", document.querySelector("#preparation"), document.querySelectorAll(".preparation"))
