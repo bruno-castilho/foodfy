@@ -1,0 +1,15 @@
+<div class="items">
+    <div class="countainer">
+        <div class="item">
+            <h3>Nome</h3>
+            <input type="text" name="name" class="Nome" value="{{user.name}}">
+        </div>
+        <div class="item">
+            <h3>Email</h3>
+            <input type="e-mail" name="email" class="Email" onblur="Validate.apply(this, 'isEmail')" value="{{user.email}}">
+        </div>
+    </div>
+    <div class="item" >
+        <span><input type="radio" name="is_admin" value="true" {% if user.is_admin %} checked {%endif%}>Administrador</span>
+    </div>
+</div>

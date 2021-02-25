@@ -1,0 +1,25 @@
+{% extends "foodfy/layout.njk" %}
+
+{% block main %}
+    <main>
+        <div class="home">
+            <form class="finder" action="/" method="GET">
+                <input type="text" placeholder="Buscar uma receita" name="filter" value="{{filter}}">
+                <button type="submit">Buscar</button>
+            </form>
+            <div class="bottom">
+                <h1>Buscando por "{{filter}}"</h1>
+                <div class="cards">
+                    {% for recipe in recipes %}
+                        <div class="card" id="{{recipe.id}}">
+                            <img src="{{recipe.files[0].src}}" alt="Imagem de {{recipe.files[0].name}}">
+                            <h2>{{recipe.name}}</h2>
+                            <p>por
+                                {{recipe.author}}</p>
+                        </div>
+                        {% endfor%}
+                    </div>
+                </div>
+            </div>
+        </main>
+    {% endblock main %}

@@ -1,0 +1,25 @@
+{% extends "session/layout.njk" %}
+{% block main %}
+{% include "session/mensage.njk" %}  
+    <div class="user-login">
+        <form class="user-login" method="POST" action="/admin">
+            <section>
+                <h1>Iniciar Sessão</h1>
+                <div class="items">
+                    <div class="item">
+                        <h2>Email</h2>
+                        <input type="email" name="email" placeholder="Digite seu email" {%if error%} id="error"{%endif%}>
+                    </div>
+                    <div class="item"> 
+                        <h2>Password</h2>
+                        <input type="password" name="password" placeholder="Digite sua senha" {%if error%} id="error"{%endif%}>
+                    </div>         
+                </div>
+                <div class="buttons">
+                    <a href="admin/forgot">Perdeu a senha?</a>
+                    <button type="submit">Acessar</button>
+                </div>
+            </section>
+        </form>
+    </div>
+{% endblock main %}

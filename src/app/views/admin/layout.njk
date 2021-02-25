@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="/admin.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <div class="header">
+                <section>
+                <div class="links">
+                    <div class="logo"><img src="/logo-admin.png" alt=""></div>                   
+                    <a href="/admin/recipes" >RECEITAS</a>
+                    <a href="/admin/chefs" >CHEFS</a>
+                    <a href="/admin/users">USUÁRIOS</a>
+                </div>
+                {% if session.userId %}
+                <div class="logout"> 
+                    <form action="/admin/logout" method="POST">
+                        <button>Sair</button>
+                    </form>
+                </div>
+                {% endif%}
+                </section>
+            </div>
+        </header>
+        {% block main %}
+        {% endblock main %}
+        <script src="/scripts.js">
+        </script>
+    </body>
+    
+</html>

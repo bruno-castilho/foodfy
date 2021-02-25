@@ -1,0 +1,29 @@
+{% extends "admin/layout.njk" %}
+
+{% block main %}
+    <div class="user-list">
+        <div class="head">
+            <h1>Usúarios</h1>
+            <div class="button">
+                <a href="users/create">Novo</a>
+            </div>
+        </div>
+        <div class="users">
+            {% for user in users %}
+                <div class="user">
+                    <div class="countainer">
+                        <h2>{{user.name}}</h2>
+                        <h3>{{user.email}}</h3>
+                        <div class="setup">
+                            <a class="editar" href="http://localhost:3000/admin/users/{{user.id}}/edit">editar</a>
+                            <form class="form-delete" action="/admin/users?_method=DELETE" method="POST">
+                                <input type="hidden" name="id" value="{{user.id}}">
+                                <button type="submit">Remover</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                {% endfor%}
+            </div>
+        </div>
+{% endblock main %}

@@ -1,0 +1,14 @@
+{% extends "admin/layout.njk" %}
+
+{% block main %}
+<div class="chef-create">
+    <form class="chef-create" method="POST" action="/admin/chefs" enctype="multipart/form-data">
+        <section class="head">
+            <h3>Criando chef</h3>
+            <button type="submit" onclick="Validate.checkFieldsChef(event)">Salvar chef</button>
+        </section>
+
+        {% include "admin/chef/fields.njk" %}  
+    </form>
+</div>
+{% endblock main %}

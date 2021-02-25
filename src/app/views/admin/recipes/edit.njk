@@ -1,0 +1,28 @@
+{% extends "admin/layout.njk" %}
+
+{% block main %}
+
+    <div class="admin-create">
+        <form method="POST" action="/admin/recipes?_method=PUT" enctype="multipart/form-data">
+            <input type="hidden" name="id" value='{{recipe.id}}' type="number")>  
+            <section class="head">
+                <h3>Criando Receita</h3>
+                <button type="submit" onclick="Validate.checkFieldsRecipe(event)">Salvar receita</button>
+            </section>   
+            {% include "admin/recipes/fields.njk" %}    
+        </form>
+        <form class="form-delete" action="/admin/recipes?_method=DELETE" method="POST">
+            <input type="hidden" name="id" value="{{recipe.id}}">
+            <button type="submit">Deletar</button>
+        </form>
+    </div>
+    <script>
+        const formDelete = document.querySelector(".form-delete")
+        formDelete.addEventListener("submit", function(event){
+            const confirmation = confirm("Deseja mesmo deletar ?")
+            if(!confirmation){
+                event.preventDefault()
+            }
+        })
+    </script>
+{% endblock main %}

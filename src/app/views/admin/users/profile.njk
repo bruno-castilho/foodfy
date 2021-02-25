@@ -1,0 +1,30 @@
+{% extends "admin/layout.njk" %}
+
+{% block main %}
+    <div class="user-create">
+        <form class="user-create" method="POST" action="/admin/profile?_method=PUT">
+            <section class="head">
+                <h3>Bem vindo {{user.name}}</h3>
+                <div class="buttons">
+                    <button type="submit">Salvar</button>
+                </div>
+            </section>
+            <div class="items">
+                <div class="countainer">
+                    <div class="item">
+                        <h3>Nome</h3>
+                        <input type="text" name="name" value="{{user.name}}">
+                    </div>
+                    <div class="item">
+                        <h3>Email</h3>
+                        <input type="e-mail" name="email" onblur="Validate.apply(this, 'isEmail')" value="{{user.email}}">
+                    </div>
+                    <div class="item">
+                        <h3>Senha</h3>
+                        <input type="password" name="password" placeholder="Digite sua senha">
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+{% endblock main %}

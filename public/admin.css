@@ -1,0 +1,833 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    font-family: "Helvetica";
+}
+
+
+/*layout*/
+
+.header {
+    width: 100%;
+    height: 80px;
+    background-color: #000000;
+}
+
+.header section {
+    padding-top: 24px;
+    position: relative;
+}
+
+.header section .links {
+    width: 940px;
+    margin: 0 auto;
+    display: grid;
+    gap: 25px;
+    grid-template-columns: 91px 74px 51px 1fr;
+}
+
+.header section .links a {
+    margin-top: 7px;
+    font-size: 15px;
+    color: #999999;
+    text-decoration: none;
+}
+
+.header section .links .active {
+    color: #FFFFFF;
+}
+
+.header section .logout {
+    position: absolute;
+    right: 50px;
+    top: 50%;
+}
+
+.header section .logout form button {
+    font-weight: bold;
+    background-color: black;
+    font-size: 15px;
+    color: #FFFFFF;
+    text-align: right;
+    cursor: pointer;
+}
+
+
+/*create/Edit */
+
+.user-create,
+.chef-create,
+.admin-create {
+    width: 940px;
+    margin: 50px auto 0px auto;
+    position: relative;
+}
+
+.user-create .head,
+.chef-create .head,
+.admin-create .head {
+    padding-bottom: 30px;
+    position: relative;
+}
+
+.user-create .head h3,
+.user-create .head .buttons,
+.chef-create .head h3,
+.chef-create .head button,
+.admin-create .head h3,
+.admin-create .head button {
+    display: inline-block;
+}
+
+.chef-create .head button,
+.admin-create .head button {
+    position: absolute;
+    right: 0;
+    width: 139px;
+    height: 37px;
+    background: #6558C3;
+    border-radius: 4px;
+    font-family: Roboto;
+    font-weight: bold;
+    font-size: 16px;
+    color: #FFFFFF;
+}
+
+.user-create .head .buttons {
+    position: absolute;
+    right: 0;
+}
+
+.user-create .head .buttons button {
+    background: #6558C3;
+    width: 139px;
+    height: 37px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 16px;
+    color: #FFFFFF;
+}
+
+.user-create .head .buttons button[type=reset] {
+    background: #8A8A8A;
+    margin-left: 16px;
+}
+
+.admin-create .items .item {
+    margin-bottom: 30px;
+    width: 940px;
+}
+
+.admin-create .items .item:first-child {
+    height: 182px;
+    margin-bottom: 30px;
+}
+
+.admin-create .items .item .countainer {
+    display: grid;
+    gap: 10px;
+    width: 940px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.admin-create .items .item .countainer .photo-upload {
+    position: relative;
+    background: #FFFFFF;
+    border: 1px solid #DDDDDD;
+    border-radius: 3.5px;
+    height: 146px;
+}
+
+.admin-create .items .item .countainer .photo-upload input {
+    position: absolute;
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.admin-create .items .item .countainer .photo-upload i {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background: #FFFFFF;
+    color: #999999;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.chef-create .items .item .countainer .photo,
+.admin-create .items .item .countainer .photo {
+    position: relative;
+    border: 1px solid #DDDDDD;
+    border-radius: 3.5px;
+    height: 146px;
+}
+
+.chef-create .items .item .countainer .photo img,
+.admin-create .items .item .countainer .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.chef-create .items .item .countainer .photo i,
+.admin-create .items .item .countainer .photo i {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background: rgba(255, 255, 255, 0.85);
+    color: red;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.chef-create .items .item .countainer .photo:hover i,
+.admin-create .items .item .countainer .photo:hover i {
+    opacity: 1;
+}
+
+.chef-create .items .item input[type=text],
+.admin-create .items .item input,
+.admin-create .items .item textarea {
+    width: 100%;
+    height: 49px;
+    background: #FFFFFF;
+    border: 1px solid #DDDDDD;
+    border-radius: 4px;
+    font-weight: normal;
+    font-size: 16px;
+    color: #111111;
+}
+
+.admin-create .items .item select {
+    width: 100%;
+    height: 49px;
+    background: #FFFFFF;
+    border: 1px solid #DDDDDD;
+    border-radius: 4px;
+    font-weight: normal;
+    font-size: 16px;
+    color: #999999;
+}
+
+option {
+    font-weight: normal;
+    font-size: 16px;
+    color: #111111;
+}
+
+option:first-child {
+    font-weight: normal;
+    font-size: 16px;
+    color: #999999;
+}
+
+.admin-create .items .item textarea {
+    height: 257px;
+    resize: none;
+}
+
+.admin-create .items .item h3 {
+    margin-bottom: 10px
+}
+
+.admin-create .items .item button {
+    font-weight: bold;
+    font-size: 16px;
+    color: #6558C3;
+    background-color: white;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+.chef-create .form-delete button,
+.admin-create .form-delete button {
+    position: absolute;
+    top: 0px;
+    right: 150px;
+    background: #DC4747;
+    border-radius: 4px;
+    padding: 9px 20px;
+    font-weight: bold;
+    font-size: 16px;
+    color: #FFFFFF;
+}
+
+.chef-create .items .item {
+    margin-bottom: 30px;
+}
+
+.chef-create .items .item h3 {
+    margin-bottom: 10px;
+}
+
+.chef-create .items .item .countainer .photo-upload {
+    position: relative;
+    width: 140px;
+    height: 38px;
+}
+
+.chef-create .items .item .countainer .photo-upload button {
+    position: absolute;
+    background: #6558C3;
+    border-radius: 4px;
+    width: 140px;
+    height: 38px;
+    font-weight: bold;
+    font-size: 16px;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.chef-create .items .item .countainer .photo-upload input {
+    position: absolute;
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.chef-create .items .item .countainer .photo {
+    margin-top: 10px;
+    height: 140px;
+    width: 140px;
+}
+
+.user-create .items .countainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.user-create .items .countainer .item h3 {
+    font-weight: bold;
+    font-size: 16px;
+    color: #111111;
+    margin-bottom: 10px;
+}
+
+.user-create .items .countainer .item input {
+    width: 450px;
+    height: 50px;
+    background: #FFFFFF;
+    border: 1px solid #DDDDDD;
+    border-radius: 4px;
+}
+
+.user-create .items .countainer .item .error {
+    margin-top: 5px;
+    color: red;
+    font-size: 12px;
+}
+
+.user-create .item {
+    margin-top: 33px;
+}
+
+.user-create .item span {
+    font-weight: bold;
+    font-size: 16px;
+    color: #111111;
+}
+
+.user-create .item span input[type="radio"] {
+    margin-right: 8px;
+}
+
+
+/* admin index*/
+
+.admin-index {
+    width: 940px;
+    margin: 0 auto;
+}
+
+.admin-index .head {
+    margin: 50px 0px 30px 0px;
+}
+
+.admin-index .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.admin-index .cards .card {
+    display: grid;
+    grid-template-columns: 172px 1fr;
+    gap: 20px;
+}
+
+.admin-index .cards .card .img {
+    background-size: 100% 100%;
+    width: 172px;
+    height: 80px;
+    border-radius: 8.57px;
+}
+
+.admin-index .cards .card .details h1 {
+    font-weight: normal;
+    font-size: 18px;
+    color: #111111;
+    margin-bottom: 5px;
+}
+
+.admin-index .cards .card .details h2 {
+    font-weight: normal;
+    font-size: 14px;
+    color: #777777;
+    margin-bottom: 10px;
+}
+
+.admin-index .cards .card .details a {
+    font-weight: bold;
+    font-size: 14px;
+    color: #6558C3;
+    text-decoration: none;
+}
+
+
+/* show */
+
+.show {
+    padding-top: 55px;
+    width: 940px;
+    margin: 0 auto;
+}
+
+.show .top {
+    padding-bottom: 24px;
+    position: relative;
+}
+
+.show .top h2,
+.show .top .button {
+    display: inline-block;
+}
+
+.show .top h2 {
+    font-weight: bold;
+    font-size: 24px;
+    color: #111111;
+}
+
+.show .top .button {
+    position: absolute;
+    padding: 9px 20px 9px 20px;
+    background: #6558C3;
+    right: 0;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    color: #FFFFFF;
+}
+
+.show .recipe .head .photos .img {
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 280px;
+    border-radius: 15px;
+    margin-bottom: 8px;
+}
+
+.show .recipe .head .photos .galery {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.show .recipe .head .photos .galery .photo {
+    display: inline-block;
+    background-position: center;
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+    border-radius: 3.5px;
+    margin-left: 10px;
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.show .recipe .head .photos .galery .active {
+    display: inline-block;
+    background-position: center;
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+    border-radius: 3.5px;
+    margin-left: 10px;
+    opacity: 1;
+}
+
+.show .recipe .head h1 {
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+    color: #111111;
+}
+
+.show .recipe .head h2 {
+    text-align: center;
+    font-weight: normal;
+    font-size: 20px;
+    color: #777777;
+    margin-bottom: 31px;
+}
+
+.show .recipe .receita-text .setup {
+    margin-bottom: 19px;
+}
+
+.show .recipe .receita-text .setup a {
+    font-weight: bold;
+    font-size: 24px;
+    color: #111111;
+}
+
+.show .recipe .receita-text .text {
+    font-weight: normal;
+    font-size: 18px;
+    color: #444444;
+    line-height: 28px;
+    margin-bottom: 41px;
+}
+
+.show .recipe .receita-text .text ul {
+    list-style-type: none;
+    padding-left: 1em;
+}
+
+.show .recipe .receita-text .text ul>li:before {
+    display: inline-block;
+    content: "-";
+    width: 1em;
+    margin-left: -1em;
+}
+
+.show .recipe .receita-text .text p {
+    white-space: pre-line;
+}
+
+
+/* admin chef */
+
+.chefs {
+    width: 940px;
+    margin: 0px auto;
+}
+
+.chefs .head {
+    margin-top: 50px;
+    margin-bottom: 40px;
+}
+
+.chefs .head h2 {
+    font-weight: bold;
+    font-size: 24px;
+    color: #111111;
+}
+
+.chefs .chefs_card {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    row-gap: 20px;
+}
+
+.chefs .chefs_card .chef {
+    display: grid;
+    grid-template-columns: 68px 1fr;
+    gap: 10px;
+}
+
+.chefs .chefs_card .chef .details {
+    margin: 10px;
+}
+
+.chefs .chefs_card .chef .avatar {
+    width: 64px;
+    height: 64px;
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
+    box-shadow: 3px 1px 6px -4px black;
+}
+
+.chefs .chefs_card .chef .details h2 {
+    font-weight: normal;
+    font-size: 18px;
+    color: #111111;
+}
+
+.chefs .chefs_card .chef .details .link {
+    margin-top: 10px;
+}
+
+.chefs .chefs_card .chef .details .link a {
+    font-weight: bold;
+    font-size: 14px;
+    color: #6558C3;
+    text-decoration: none;
+}
+
+
+/*chef*/
+
+.chef-show {
+    width: 940px;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.chef-show .head {
+    padding-bottom: 30px;
+    position: relative;
+}
+
+.chef-show .head h3,
+.chef-show .head a {
+    display: inline-block;
+}
+
+.chef-show .head a {
+    position: absolute;
+    right: 0;
+    padding: 10px 20px;
+    background: #6558C3;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 16px;
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.chef-show .chef {
+    margin: 50px 0px
+}
+
+.chef-show .chef .avatar {
+    width: 200px;
+    height: 200px;
+    margin: 0px auto;
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
+    box-shadow: 3px 1px 6px -4px black;
+}
+
+.chef-show .chef h2 {
+    font-weight: bold;
+    font-size: 36px;
+    color: #111111;
+    margin: 30px 0px 4px;
+    text-align: center;
+}
+
+.chef-show .chef h3 {
+    font-weight: normal;
+    font-size: 20px;
+    color: #777777;
+    text-align: center;
+}
+
+.chef-show .recipes {
+    margin-bottom: 50px;
+}
+
+.chef-show .recipes h2 {
+    font-weight: bold;
+    font-size: 24px;
+    color: #111111;
+    margin-bottom: 30px;
+}
+
+.chef-show .recipes .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.chef-show .recipes .cards .card {
+    display: grid;
+    grid-template-columns: 172px 1fr;
+    gap: 20px;
+}
+
+.chef-show .recipes .cards .card .img {
+    background-size: 100% 100%;
+    width: 172px;
+    height: 80px;
+    border-radius: 8.57px;
+}
+
+.chef-show .recipes .cards .card .details h1 {
+    font-weight: normal;
+    font-size: 18px;
+    color: #111111;
+    margin-bottom: 5px;
+}
+
+.chef-show .recipes .cards .card .details h2 {
+    font-weight: normal;
+    font-size: 14px;
+    color: #777777;
+    margin-bottom: 10px;
+}
+
+.chef-show .recipes .cards .card .details a {
+    font-weight: bold;
+    font-size: 14px;
+    color: #6558C3;
+    text-decoration: none;
+}
+
+
+/* users list*/
+
+.user-list {
+    width: 940px;
+    margin: 0 auto;
+}
+
+.user-list .head {
+    margin-top: 54px;
+    position: relative;
+}
+
+.user-list .head h1 {
+    display: inline;
+    font-weight: bold;
+    font-size: 24px;
+    color: #111111;
+}
+
+.user-list .head .button {
+    cursor: pointer;
+    position: absolute;
+    right: 0px;
+    display: inline-block;
+}
+
+.user-list .head .button a {
+    font-weight: bold;
+    font-size: 16px;
+    color: #FFFFFF;
+    text-decoration: none;
+    background: #7159C1;
+    border-radius: 4px;
+    padding: 9px 46.5px;
+}
+
+.user-list .users {
+    margin-top: 70px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    align-content: center;
+    gap: 52px;
+}
+
+.user-list .users .user {
+    display: flex;
+    justify-content: center;
+}
+
+.user-list .users .user:nth-child(1) {
+    display: initial;
+    justify-content: initial;
+}
+
+.user-list .users .user:nth-child(3n+4).countainer {
+    float: left;
+}
+
+.user-list .users .user:nth-child(3n+4) {
+    display: initial;
+    justify-content: initial;
+}
+
+.user-list .users .user:nth-child(3n) .countainer {
+    float: right;
+}
+
+.user- .user-list .user .countainer h2 {
+    font-size: 18px;
+    color: #111111;
+}
+
+.user-list .user .countainer h3 {
+    font-size: 14px;
+    color: #777777;
+}
+
+.user-list .user .countainer .setup {
+    margin-top: 16px;
+}
+
+.user-list .user .countainer .setup a {
+    font-weight: bold;
+    font-size: 14px;
+    color: #6558C3;
+    text-decoration: none;
+}
+
+.user-list .user .countainer .setup form {
+    display: inline;
+}
+
+.user-list .user .countainer .setup form button {
+    color: #F55A5A;
+    margin-left: 16px;
+    background-color: white;
+    cursor: pointer;
+}
+
+
+/* error/sucess */
+
+.error {
+    display: flex;
+    justify-content: center;
+    padding: 16px;
+    position: absolute;
+    width: 100%;
+    color: white;
+    top: 0;
+    opacity: 1;
+    animation: hidemessage 400ms 5s ease-out forwards;
+}
+
+.error.error {
+    background: red;
+}
+
+#error {
+    border: 1px solid #FF3131;
+}
+
+@keyframes hidemessage {
+    to {
+        top: -50px;
+        opacity: 0;
+    }
+}

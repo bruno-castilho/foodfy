@@ -1,0 +1,20 @@
+{% extends "session/layout.njk" %}
+{% block main %}
+    <div class="user-forgot">
+        {% include "session/mensage.njk" %}  
+            <form class="user-forgot" method="POST" action="/admin/forgot">
+                <section>
+                    <h1>Esqueceu a Senha?</h1>
+                    <div class="items">
+                        <div class="item">
+                            <h2>Email</h2>
+                            <input type="email" name="email" placeholder="Digite seu email para recuperar a senha" {%if error%} id="error"{%endif%}>
+                        </div>
+                    </div>
+                    <div class="buttons">
+                        <button type="submit">Recuperar</button>
+                    </div>
+                </section>
+            </form>
+    </div>
+{% endblock main %}

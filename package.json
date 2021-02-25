@@ -1,0 +1,33 @@
+{
+    "name": "foddfy",
+    "version": "1.0.0",
+    "description": "",
+    "main": "scripts.js",
+    "scripts": {
+        "start": "npm-run-all -p nodemon browsersync",
+        "nodemon": "nodemon src/server.js",
+        "browsersync": "browser-sync start --proxy http://localhost:5000 --files [src/app/views, public]"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "bcryptjs": "^2.4.3",
+        "browsersync": "0.0.1-security",
+        "connect-pg-simple": "^6.1.0",
+        "express": "^4.17.1",
+        "express-session": "^1.17.1",
+        "faker": "^5.2.0",
+        "fs": "0.0.1-security",
+        "method-override": "^3.0.0",
+        "multer": "^1.4.2",
+        "nodemailer": "^6.4.11",
+        "nunjucks": "^3.2.0",
+        "pg": "^8.2.1"
+    },
+    "devDependencies": {
+        "browser-sync": "^2.26.7",
+        "nodemon": "^2.0.2",
+        "npm-run-all": "^4.1.5"
+    }
+}

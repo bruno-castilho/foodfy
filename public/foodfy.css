@@ -1,0 +1,468 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+/*  Layout */
+
+header {
+    width: 940px;
+    height: 93px;
+    position: relative;
+    margin: 0 auto;
+}
+
+header .countainer {
+    position: absolute;
+    top: 36.1px;
+    left: 1px;
+    cursor: pointer;
+}
+
+header .countainer a img {
+    width: 90.6px;
+    height: 26.9px;
+}
+
+header .links a+a {
+    margin-left: 30px;
+}
+
+header .links {
+    position: absolute;
+    left: 214px;
+    top: 38px;
+}
+
+header .links .link {
+    font-family: Roboto;
+    font-weight: normal;
+    font-size: 16px;
+    color: #111111;
+    text-decoration: none;
+}
+
+header .links .active {
+    font-weight: bold;
+}
+
+footer {
+    width: 100%;
+    background: #EEEEEE;
+    color: #999999;
+    text-align: center;
+    margin-top: auto;
+    padding: 23px 0;
+}
+
+footer h1 {
+    font-family: Roboto;
+    font-weight: normal;
+    font-size: 14px;
+}
+
+
+/*home*/
+
+.home {
+    width: 940px;
+    height: 928px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.home .finder {
+    position: absolute;
+    right: 0px;
+    top: -60px;
+}
+
+.home .finder input {
+    background: #FFFFFF;
+    border: 1px solid #DDDDDD;
+    border-radius: 4px;
+    width: 246px;
+    height: 37px;
+    text-indent: 15px;
+}
+
+.home .finder button {
+    color: white;
+    padding: 10px 20px;
+    background: #6558C3;
+    border-radius: 4px;
+}
+
+.home .top {
+    position: relative;
+    height: 366px;
+    background: #FBDFDB;
+    border-radius: 30px;
+    border-radius: 30px;
+}
+
+.home .top h1 {
+    font-family: Roboto;
+    font-weight: bold;
+    font-size: 32px;
+    color: #111111;
+    position: absolute;
+    top: 117px;
+    left: 60px;
+}
+
+.home .top p {
+    position: absolute;
+    width: 316px;
+    opacity: 0.7;
+    font-family: Roboto;
+    font-weight: normal;
+    font-size: 18px;
+    color: #000000;
+    line-height: 28px;
+    top: 165px;
+    left: 60px;
+}
+
+.home .top img {
+    position: absolute;
+    top: 66px;
+    right: 100px;
+    width: 216px;
+}
+
+.home .bottom {
+    top: 50px;
+    height: 452px;
+    width: 940px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.home .bottom h1 {
+    font-family: Roboto;
+    font-weight: bold;
+    font-size: 24px;
+    color: #111111;
+    height: 48px;
+}
+
+.home .bottom .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-column-gap: 20px;
+    grid-row-gap: 30px;
+}
+
+.home .bottom .cards .card {
+    position: relative;
+    width: 300px;
+    height: 202px;
+    cursor: pointer;
+}
+
+.home .bottom .cards .card img {
+    width: 300px;
+    height: 140px;
+    border-radius: 15px;
+}
+
+.home .bottom .cards .card h2 {
+    font-family: Roboto;
+    font-weight: normal;
+    font-size: 18px;
+    color: #111111;
+    padding-top: 20px;
+}
+
+.home .bottom .cards .card p {
+    padding-top: 5px;
+    font-family: Roboto;
+    font-weight: normal;
+    font-size: 14px;
+    color: #777777;
+}
+
+
+/* sobre */
+
+.sobre {
+    padding-bottom: 30px;
+    padding-bottom: 30px;
+}
+
+.sobre h1 {
+    font-family: Roboto;
+    font-weight: bold;
+    font-size: 24px;
+    color: #111111;
+    padding-top: 20px;
+    width: 940px;
+    margin: 0 auto;
+    padding-bottom: 20px;
+}
+
+.sobre p {
+    font-family: Roboto;
+    font-weight: normal;
+    font-size: 18px;
+    color: #444444;
+    line-height: 28px;
+    width: 940px;
+    margin: 0 auto;
+    padding-bottom: 20px;
+}
+
+.sobre h2 {
+    font-family: Roboto;
+    font-weight: bold;
+    font-size: 20px;
+    color: #111111;
+    width: 940px;
+    margin: 0 auto;
+    padding-bottom: 20px;
+}
+
+
+/*receitas*/
+
+.receitas {
+    padding-top: 20px;
+    padding-bottom: 50px;
+    width: 940px;
+    margin: 0 auto;
+}
+
+.receitas .cards_receitas {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 20px;
+    grid-row-gap: 30px;
+}
+
+.receitas .cards_receitas .card {
+    position: relative;
+    width: 300px;
+    cursor: pointer;
+}
+
+.receitas .cards_receitas .card img {
+    width: 300px;
+    height: 140px;
+    border-radius: 15px;
+}
+
+.receitas .cards_receitas .card h2 {
+    font-family: Roboto;
+    font-weight: bold;
+    font-size: 18px;
+    color: #111111;
+    padding-top: 20px;
+}
+
+.receitas .cards_receitas .card p {
+    padding-top: 5px;
+    font-family: Roboto;
+    font-weight: normal;
+    font-size: 14px;
+    color: #777777;
+}
+
+
+/*receita*/
+
+.receita .head {
+    width: 940px;
+    margin: 0 auto;
+    padding-bottom: 50px;
+    text-align: center;
+}
+
+.receita .head .photos .img {
+    width: 940px;
+    height: 280px;
+    border-radius: 15px;
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 8px;
+}
+
+.receita .head .photos .galery {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.receita .head .photos .galery .photo {
+    display: inline-block;
+    background-position: center;
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+    border-radius: 3.5px;
+    margin-left: 10px;
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.receita .head .photos .galery .active {
+    display: inline-block;
+    background-position: center;
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+    border-radius: 3.5px;
+    margin-left: 10px;
+    opacity: 1;
+}
+
+.receita .head h1 {
+    font-family: Roboto;
+    font-weight: bold;
+    font-size: 36px;
+    color: #111111;
+}
+
+.receita .head h2 {
+    font-family: Roboto;
+    font-weight: normal;
+    font-size: 20px;
+    color: #777777;
+    padding-bottom: 50px;
+}
+
+.receita .receita-text .setup {
+    width: 940px;
+    height: auto;
+    margin: 0 auto;
+}
+
+.receita .receita-text .setup .title-receita {
+    font-family: Roboto;
+    font-weight: bold;
+    font-size: 24px;
+    color: #111111;
+}
+
+.receita .receita-text .setup .show {
+    font-family: Roboto;
+    font-weight: bold;
+    font-size: 12px;
+    color: #999999;
+    cursor: pointer;
+}
+
+.receita .receita-text {
+    width: 940px;
+    margin: 0 auto;
+    padding-bottom: 39px;
+    height: auto;
+}
+
+.receita .receita-text .ingredients.active,
+.receita .receita-text .informações-adicionais.active,
+.receita .receita-text .preparo.active {
+    padding-top: 20px;
+    height: auto;
+    visibility: visible;
+}
+
+.receita .receita-text .informações-adicionais.active p {
+    white-space: pre-line;
+    font-family: Roboto;
+    font-weight: normal;
+    font-size: 18px;
+    color: #444444;
+    line-height: 28px;
+}
+
+.receita .receita-text .preparo.active ul,
+.receita .receita-text .ingredients.active ul {
+    padding-left: 17px;
+    font-family: Roboto;
+    font-weight: normal;
+    font-size: 18px;
+    color: #444444;
+    line-height: 28px;
+    list-style-type: none;
+    padding-left: 1em;
+}
+
+.receita .receita-text .preparo.active ul>li:before,
+.receita .receita-text .ingredients.active ul>li:before {
+    display: inline-block;
+    content: "-";
+    width: 1em;
+    margin-left: -1em;
+}
+
+.receita .receita-text .ingredients,
+.receita .receita-text .informações-adicionais,
+.receita .receita-text .preparo {
+    height: 0;
+    visibility: hidden;
+}
+
+.receita .receita-text .informações-adicionais p,
+.receita .receita-text .preparo ul,
+.receita .receita-text .ingredients ul {
+    line-height: 0px;
+}
+
+
+/*chefs*/
+
+.foodfy-chefs {
+    width: 940px;
+    margin: 0px auto;
+}
+
+.foodfy-chefs .chefs_card {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    row-gap: 20px;
+    margin-top: 55px;
+}
+
+.foodfy-chefs .chefs_card .chef {
+    display: grid;
+    grid-template-columns: 68px 1fr;
+    gap: 10px;
+}
+
+.foodfy-chefs .chefs_card .chef .details {
+    margin: 10px;
+}
+
+.foodfy-chefs .chefs_card .chef .avatar {
+    width: 64px;
+    height: 64px;
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
+    box-shadow: 3px 1px 6px -4px black;
+}
+
+.foodfy-chefs .chefs_card .chef .details h2 {
+    font-family: Roboto;
+    font-weight: normal;
+    font-size: 18px;
+    color: #111111;
+}
+
+.foodfy-chefs .chefs_card .chef .details h3 {
+    font-family: Roboto;
+    font-weight: normal;
+    font-size: 14px;
+    color: #666666;
+}

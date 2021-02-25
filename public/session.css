@@ -1,0 +1,170 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    font-family: "Helvetica";
+    position: relative;
+    margin: 0px;
+}
+
+
+/* layout */
+
+.header-session {
+    width: 94px;
+    height: 32px;
+    margin: 0px auto 146px auto;
+}
+
+.header-session img {
+    margin-top: 35px;
+    width: 94px;
+    height: 32px;
+}
+
+
+/* login/ forgot */
+
+.user-new-password section,
+.user-forgot section,
+.user-login section {
+    width: 500px;
+    margin: 0 auto;
+}
+
+.user-new-password section h1,
+.user-forgot section h1,
+.user-login section h1 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 24px;
+    color: #111111;
+    margin-bottom: 35px;
+}
+
+.user-new-password section .items .item h2,
+.user-forgot section .items .item h2,
+.user-login section .items .item h2 {
+    font-weight: bold;
+    font-size: 16px;
+    color: #111111;
+    margin-bottom: 10px;
+}
+
+.user-new-password section .items .item input,
+.user-forgot section .items .item input,
+.user-login section .items .item input {
+    width: 500px;
+    height: 50px;
+    background: #FFFFFF;
+    border: 1px solid #DDDDDD;
+    border-radius: 4px;
+    margin-bottom: 35px;
+    text-indent: 15px;
+}
+
+.user-login section .buttons {
+    margin-top: 15px;
+}
+
+.user-login section .buttons a {
+    font-weight: bold;
+    font-size: 16px;
+    color: #969696;
+    text-decoration: none;
+    width: 129px;
+}
+
+.user-login section .buttons button {
+    padding: 9px 35px;
+    background: #6558C3;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 16px;
+    color: #FFFFFF;
+    margin-left: 235px;
+    cursor: pointer;
+}
+
+.user-forgot section .buttons,
+.user-new-password section .buttons {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.user-new-password section .buttons button,
+.user-forgot section .buttons button {
+    padding: 9px 35px;
+    background: #6558C3;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 16px;
+    color: #FFFFFF;
+    cursor: pointer;
+    position: right;
+}
+
+
+/* error/sucess */
+
+.error {
+    position: absolute;
+    background: #DC4747;
+    border: 1px solid #DDDDDD;
+    border-radius: 4px;
+    width: 344px;
+    height: 135px;
+    top: 12px;
+    right: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*animation */
+    animation-name: down;
+    animation-duration: 200ms;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+}
+
+.sucess {
+    position: absolute;
+    background: #01B12A;
+    border: 1px solid #DDDDDD;
+    border-radius: 4px;
+    width: 344px;
+    height: 135px;
+    top: 12px;
+    right: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*animation */
+    animation-name: down;
+    animation-duration: 200ms;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+}
+
+.error p,
+.sucess p {
+    margin: 1px;
+    text-align: center;
+    font-family: Helvetica;
+    font-weight: bold;
+    font-size: 16px;
+    color: #FFFFFF;
+}
+
+#error {
+    border: 1px solid #FF3131;
+}
+
+@keyframes down {
+    0% {}
+    100% {
+        opacity: 0;
+    }
+}

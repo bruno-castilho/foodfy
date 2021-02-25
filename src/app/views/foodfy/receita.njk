@@ -1,0 +1,61 @@
+{% extends "foodfy/layout.njk" %}
+
+{% block main %}
+    <main class="recipe">
+        <div class="receita">
+    <div class="head">
+        <div class="photos">
+            <div class="img" style="background-image: url({{recipe.files[0].src}})"></div>
+            <div class="galery">
+                {%for file in recipe.files%}
+                    <div class="photo" style="background-image: url({{file.src}})" id="{{file.id}}" src="{{file.src}}" name="{{file.name}}"></div>
+                {%endfor%}
+            </div>
+        </div>  
+        <h1>{{recipe.name}}</h1>
+        <h2>{{recipe.author}}</h2>
+    </div>
+
+    <div class="receita-text">              
+        <div class="setup">
+            <a class="title-receita">Ingredientes</a>
+            <a class="show" id="ingredients">ESCONDER</a>
+        </div>
+        
+        <div class="ingredients active">
+            <ul>
+                {% for linha in recipe.ingredients %}
+                    <li>{{linha}}</li>
+                {% endfor%}
+                </ul>
+        </div>
+    </div>   
+
+    <div class="receita-text">
+        <div class="setup">
+            <a class="title-receita">Modo de preparo</a>
+            <a class="show" id="preparo">ESCONDER</a>
+        </div>
+
+        <div class="preparo active">
+            <ul>
+                {% for linha in recipe.preparation %}
+                    <li>{{linha}}</li>
+                    {% endfor%}                     
+            </ul>
+        </div>
+    </div>
+
+    <div class="receita-text">
+        <div class="setup">
+            <a class="title-receita">Informações adicionais</a>
+            <a class="show" id="informações-adicionais">ESCONDER</a>
+        </div>
+        
+        <div class="informações-adicionais active">
+            <p>{{recipe.information}}</p>
+        </div>
+    </div>
+</div>
+    </main>
+{% endblock main %}

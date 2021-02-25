@@ -1,0 +1,17 @@
+{% extends "admin/layout.njk" %}
+
+{% block main %}
+    <div class="user-create">
+        <form class="user-create" method="POST" action="/admin/users?_method=PUT">
+            <section class="head">
+                <h3>Atualizar Usuário</h3>
+                <div class="buttons">
+                    <button type="submit" onclick="Validate.checkFieldsUser(event)">Salvar</button>
+                </div>
+            </section>
+        {% include "admin/users/fields.njk" %}
+        <input type="hidden" name="id" value="{{user.id}}"> 
+        </form>
+        
+    </div>
+{% endblock main %}
