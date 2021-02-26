@@ -1,7 +1,6 @@
 {% extends "admin/layout.njk" %}
 
 {% block main %}
-
     <div class="admin-create">
         <form method="POST" action="/admin/recipes?_method=PUT" enctype="multipart/form-data">
             <input type="hidden" name="id" value='{{recipe.id}}' type="number")>  
@@ -16,6 +15,13 @@
             <button type="submit">Deletar</button>
         </form>
     </div>
+{% endblock main %}
+
+{% block scripts %}
+    <script>
+        Utils.addInputOnClick(".add-ingredient", document.querySelector("#ingredients"), document.querySelectorAll(".ingredient"))
+        Utils.addInputOnClick(".add-preparation", document.querySelector("#preparation"), document.querySelectorAll(".preparation"))
+    </script>
     <script>
         const formDelete = document.querySelector(".form-delete")
         formDelete.addEventListener("submit", function(event){
@@ -24,12 +30,5 @@
                 event.preventDefault()
             }
         })
-    </script>
-{% endblock main %}
-
-{% block scripts %}
-    <script>
-        Utils.addInputOnClick(".add-ingredient", document.querySelector("#ingredients"), document.querySelectorAll(".ingredient"))
-        Utils.addInputOnClick(".add-preparation", document.querySelector("#preparation"), document.querySelectorAll(".preparation"))
     </script>
 {% endblock %}
