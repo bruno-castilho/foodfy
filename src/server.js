@@ -25,7 +25,10 @@ nunjucks.configure("src/app/views", {
     noCache: true
 })
 
+const PORT = 3000
+const HOST = '0.0.0.0'
 
-server.listen(5000, function() {
+server.listen(PORT, HOST, function() {
     console.log("server is running")
 })
+

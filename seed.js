@@ -14,6 +14,9 @@ async function createUsers() {
     const users = []
     const password = await hash('1234', 8)
 
+
+    
+
     while (users.length < 3) {
         users.push({
             name: faker.name.findName(),

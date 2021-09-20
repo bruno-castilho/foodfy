@@ -1,8 +1,3 @@
-DROP SCHEMA public CASCADE;
-CREATE SCHEMA public;
-
-DROP DATABASE IF EXISTS foodfy;
-CREATE DATABASE foodfy;
 
 CREATE TABLE users (
   "id" SERIAL PRIMARY KEY,
@@ -54,7 +49,7 @@ CREATE TABLE "session" (
   "expire" timestamp(6) NOT NULL
 );
 
-WITH (OIDS=FALSE);
+
 ALTER TABLE "session" 
 ADD CONSTRAINT "session_pkey" 
 PRIMARY KEY ("sid") NOT DEFERRABLE INITIALLY IMMEDIATE;
